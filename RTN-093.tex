@@ -23,7 +23,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-First Last
+Robert Blum, \v{Z}eljko Ivezi\'{c}, Phil Marshall
 }
 
 \setDocRef{RTN-093}
@@ -43,9 +43,10 @@ This document concisely captures the criteria that must be satisfied to begin re
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{First Last}
+  \addtohist{1}{2025-02-28}{01.0}{Robert Blum}
 }
-
+\graphicspath{{./}{figures/}}
+\usepackage{makecell}
 
 \begin{document}
 
@@ -57,7 +58,13 @@ This document concisely captures the criteria that must be satisfied to begin re
 % ADD CONTENT HERE
 % You can also use the \input command to include several content files.
 
-\appendix
+\input{intro}
+\input{speed}
+\input{criteria}
+
+\newpage
+%\appendix
+
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
@@ -69,9 +76,5 @@ This document concisely captures the criteria that must be satisfied to begin re
 \input{acronyms.tex}
 % If you want glossary uncomment below -- comment out the two lines above
 %\printglossaries
-
-
-
-
 
 \end{document}
