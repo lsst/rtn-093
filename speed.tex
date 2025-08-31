@@ -1,30 +1,65 @@
 \section{System Performance}{\label{secSysperf}}
   
-Handover means that the system will have passed the NSF and DOE close out review. The as delivered system will be capable of delivering images that satisfy the science requirements as defined in SRD (\cite{LPM-17}). Following the final phase of commissioning which will include science validation (SV) observations, the state of the system will be assessed and the readiness of the system and team to begin the survey will be made. 
+Handover means that the system will have passed the NSF and DOE close out review. The as delivered system will be {\it capable} of delivering images that satisfy the science requirements as defined in SRD (\cite{LPM-17}). Following the final phase of commissioning which will include science validation (SV) observations, the state of the system will be assessed and the readiness of the system and team to begin the survey will be made. Further optimization by the Operations team will be planned as needed to ensure the system performs {\it reliably} at the needed level of capability. 
 
 Rubin has developed a high level metric to summarize the system performance with respect to survey efficiency. We need to ensure both that the system is producing science capable images and data products and that the observing is efficient. 
-If the site and system are producing appropriate image quality and the system and team are acquiring data efficiently coming out of SV, we can confidently start the LSST. In Figure~\ref{fE}, we show the system contribution to image quality (and atmospheric contribution) versus the dimensionless survey efficiency or ``speed,'' fE. 
+If the site and system are producing appropriate image quality and the system and team are acquiring data efficiently, we can confidently start the LSST. In Figure~\ref{fE}, we show the system contribution to image quality (and atmospheric contribution) versus the dimensionless survey efficiency or speed, fE. 
 
 \begin{figure}%[!ht]
   \centering
 \includegraphics[width=0.75\linewidth]{fE.png}
-\caption{Dimensionless survey efficiency factor, fE. Only ops efficiency is not known precisely at this time by data or design. The ComCam run will allow a specific determination of fE as we roll into LSSTCam commissioning. fE will be fully updated by as built system performance and ops. efficiency by the end of science validation.}
+\caption{Dimensionless survey efficiency factor, fE. System Availability is the most uncertain at this time. The current state of each factor is discussed below and the quantitative criteria for starting the LSST with respect to each factor is assessed.}
 \label{fE}
 \end{figure}
 
-All f factors are dimensionless and normalized by the corresponding SRD design values. They can be “traded against each other” as “time”.
-For example, deterioration in the mirror reflectivity can be easily translated to factor fS, and traded against time (e.g. time lost to recoating, the system “efficiency”), or against loss of sensor area (fA).
-The key point is that it is possible to define a simple measurable quantity (fE) that is an excellent numerical approximation for “LSST science goals”. Thus, we can think of the effective speed of executing the LSST (in units of the nominal speed) in terms of recognizable elements: fE ~ ”eff area” * “eff FOV” * “cadence” * “downtime”
+All f factors are dimensionless and normalized by the corresponding SRD design values. They can be traded against each other as time.
+For example, deterioration in the mirror reflectivity can be easily translated to factor fS, and traded against time (e.g. time lost to recoating, the system efficiency), or against loss of sensor area (fA).
+The key point is that it is possible to define a simple measurable quantity (fE) that is an excellent numerical approximation for LSST science goals. Thus, we can think of the effective speed of executing the LSST (in units of the nominal speed) in terms of recognizable elements:  fE $=$ effective area $\times$ effective FOV $\times$ cadence $\times$ 1-downtime.
 
-In Figure~\ref{speed}, we show the current state of our understanding of the image quality and survey speed.
+In Figure~\ref{speed}, we show the state of our understanding of the image quality and survey speed before we went on sky with LSSTCam. The red star in the diagram is the design performance corresponding to 0.35$\arcsec$ system contribution to delivered image quality (DIQ as measure in the focal plane). The white circle is a forecast based on expectations before we went on sky. We believe there is nothing limiting us reaching that circle, but the current performance is not there yet. 
 
 \begin{figure}[t]
   \centering
 \includegraphics[width=0.85\linewidth]{speed.png}
-\caption{Image quality versus effective survey speed, fE. The system contribution to the image quality is shown on the left vertical axis and the delivered image quality including the atmosphere (added in quadrature) is on the right. The LSST design is accomplished with nominal speed 1.0 and system IQ of 0.35$''$ in this diagram. Based on known subsystem performance and design, the current forecast shows the LSST will be accomplished with significant margin. Any final margin will be used to reassess the survey strategy given by \cite{PSTN-056}.}
+\caption{Image quality versus effective survey speed, fE. The system contribution to the image quality is shown on the left vertical axis and the delivered image quality including the atmosphere (added in quadrature) is on the right. The LSST design is accomplished with nominal speed 1.0 and system IQ of 0.35$\arcsec$ in this diagram. Current performance is assessed below. The white circle is representative of where we want to drive the performance, but we have not reached it yet.}
 \label{speed}
 \end{figure}
 
-There are three regions in the diagram. Clearly we want to be in the green shaded region and to the lower right in the space. The current understanding og the system as verified through subsystem verification or from the design and median seeing from the free atmosphere (0.7$''$) suggests we are in good shape. Experience with ComCam in late 2024 suggests we should be able to reach high ops efficiency. This will be quantified in the upcoming LSSTCam commissioning period.  
+There are three regions in the diagram. Clearly we want to be in the green shaded region and to the lower right in that space. The light gray space is unacceptable for science and the dark gray space covers the area where SRD minimum specifications are met for depth, area of LSST, and visits, but fails to meet the specification for minimum system contribution to the DIQ (0.4$\arcsec$). 
+
+As of CCR2/ORR1, the current values for the f factors are given in the following table. For fA, the value is set by the number of science pixels available (each with 0.2 $\times$ 0.2 arcsec$^2$ on the sky). Accounting for the active pixels meeting specifications, the factor is fully 99$\%$. The fS factor includes read noise, QE, vignetting, optical throughput (filter, lens transmission, mirror reflectance) and DIQ (so DIQ affects both axes in our diagram). The observing efficiency factor, fO, is a function of how many visits of the right exposure time can be observed given telescope performance (how fast we move and settle). Finally, system availability is defined as the open shutter science time compared to the total elapsed time working on the on sky programs. Presently, if we consider only times when we are in the science data taking mode (doing LSST like observations) we have sustained 85$\%$ availability over a week long period. If we consider other system tuning in the denominator mixed with the science SV observations, the availability is about 75$\%$. 
+
+The range of performance between what has been achieved over periods of SV and the best performance is shown in Figure~\ref{speed2}. The goal of further optimization is to use the available technical "knobs" to tune the performance and make it more reliable. These are at a high level, the active optics system (AOS) and associated wavefront analysis, thermal control of the M1M3 cell, thermal control of the top end assembly (volume around M2), and the dome ventilation (active control of louvers and installation of the air distribution ducting). All of these are under active work and progress has been made on a number of fronts not yet reflected in Figure~\ref{speed2}. Mostly because the time available on sky has been limited since CCR2/ORR1. 
+
+\begin{table}[]
+\renewcommand{\arraystretch}{2}
+\small
+\centering
+\caption{Current f factor status}\label{tab:factors}
+\begin{tabular}{cccc}
+\hline
+factor & Description& Sustained Performance & Demonstrated Capability \\
+\hline \hline
+DIQ & System Contribution (PSF FWHM)  & 0.6$\arcsec$ & 0.4$\arcsec$ \\
+fA & FoV area factor & 0.99 & 0.99 \\
+fS & Sensitivity factor & 0.94 & 1.30 \\
+fO & Observing Efficiency & 0.97 & 1.05 \\
+SA & System Availability (up and taking data) & 0.75 & 0.85 \\
+fE & Normalized \'{E}tendue & 0.68 & 1.15 \\
+
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+\includegraphics[width=0.85\linewidth]{speed2.png}
+\caption{Image quality versus effective survey speed, fE with performance presented at CCR2-ORR1. Upper left of the orange performance region is sustained over week long periods in SV. The best performance (capability) is represented by the lower right vertex of the region. This forecast to be the typical performance by CC3. This may or may not happen depending on teh progress made in the remaining month of on sky work. }
+\label{speed2}
+\end{figure}
+
+The current capability and reliability of the system as described in Table~\ref{tab:factors} and Figure~\ref{speed2} form the basis of optimization criteria described in the next section that the Operations team will use to gate starting the LSST. 
+
+\newpage
 
 
