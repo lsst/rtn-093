@@ -4,4 +4,15 @@
 #   ACRONYM:Definition
 #
 # Example:
-#   MIA:Missing In Action
+#   MIA: In Action
+ORR1 : Operations Readiness Review 1 
+IQ : Image Quality 
+CCR3 : Construction Completeness Review 3
+CCR1 : Construction Completeness Review 1
+CCR : Construction Completeness Review
+DIQ : Delivered Image Quality
+CCR2 : Construction Completeness Review 2
+RINGSS :
+ORR2 : Operations Readiness Review 2
+FY26 : Fiscal Year 2026
+CCR4 : Construction Completeness Review 4
