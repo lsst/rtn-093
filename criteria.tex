@@ -1,6 +1,6 @@
 \section{Criteria to begin the LSST}
 
-Armed with an understanding of the \it{as--built} system performance as outlined above and the Operations team readiness, we will use a set of objective criteria to gate the start of the LSST. These criteria will be concise and easily understandable so that the community of scientists, Rubin staff and other stakeholders counting on Rubin and the survey can have confidence the Observatory is on track.
+Armed with an understanding of the {\it as--built} system performance as outlined above and the Operations team readiness, we will use a set of objective criteria to gate the start of the LSST. These criteria will be concise and easily understandable so that the community of scientists, Rubin staff and other stakeholders counting on Rubin and the survey can have confidence the Observatory is on track.
 
 The criteria articulated below are meant only to provide gating guidance signifying the survey start. There will be key processes within the overall system, including data management and processing where further work for improvements are required or desired after handover (beyond the construction project requirements). Unless these would prevent the acquisition and saving of science quality data, thereby delaying the survey start, they are not discussed or enumerated here.  These and other criteria (TBD) will be used to gauge and monitor the overall performance of the Observatory and progress towards the 10--year survey objectives going forward, with nominal $T_0$ defined by when start criteria described herein are met.
 
@@ -30,7 +30,7 @@ Item & Criterion & Description& Status \\
 
 7 & Cadence & The scientific merits and technical feasibility of the planned survey scheduler algorithms for DR1 have bee reviewed and verified. & In progress\\\hline
 
-8 & Early Science & DP2 observations are completed as planned \citep{RTN-011}.& \makecell[l]{SV is complete; \\a report will be delivered by \\October.} \\
+8 & Early Science & DP2 observations are completed as planned \citep{RTN-011}.& \makecell[l]{SV is complete; \\a report will be \\delivered by \\October.} \\
 
 \hline
 \end{tabular}
@@ -50,13 +50,6 @@ The single most important gain needed to get to the LSST start is clearly the ty
 
 Improving the system contribution to the DIQ requires continued effort on the control of optics and the dome environment. Putting this together with the criteria above results in the region of the performance diagram we can use to gate starting the LSST as depicted in Figure~\ref{speed3}. The survey can begin once the system contribution to DIQ is 0.45$\arcsec$ or less and the effective survey speed is 1.01 or better (see Table~\ref{tab:factors} and assume System Availability is 75$\%$).
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.85\linewidth]{speed3.png}
-\caption{Image quality versus effective survey speed or Normalized \'{E}tendue. The large orange rectangle represents the region in this space within which we can confidently start the LSST while working to maintain and improve performance.}
-\label{speed3}
-\end{figure}
-
 \subsection{Dome Environmental Control}
 The dome will be the last major subsystem to be completed. Indeed it will not be done until mid 2026. The critical aspects that are needed are: to install, provide control for, and optimize the actuators for the dome louvers and the installation of the HVAC ductwork used for daytime thermal conditioning of the dome interior. There are 40 louvers, and some large fraction need to be operable (open at fractions consistent with telemetry in real time for temperatures and wind). The first actuators are installed now and one louver has been opened at night. Still more will need to be brought on line after the handover to meeting the system image quality criterion (we currently expect 12 will be operable after handover). If the louvers limit us to worse than typical system DIQ performance, we won't be able to start the LSST until they are largely deployed and in routine operation. 
 
@@ -73,6 +66,13 @@ The TMA is capable of accelerating more than we currently operate it. Higher acc
 
 This leaves the System Availability, Current performance of 0.75 needs to be improved. Doing only science like observations we have reached 85$\%$ at times. We need to continue to improve on procedures and reliability of systems throughout the summit facility as we go forward. This means training for faster troubleshooting and fault recovery, making communications on the telescope system bus more reliable, improving reliability of telescope, dome, and camera functions. These have all seen marked progress as expected thoughout system integration, test, and commissioning. We will assume current performance of 75$\%$ conservatively. 
 
-Using the combined SRD minimum specifications the lowest Normalized \'{E}tendue allowed is 0.7. This level is nearly in hand; see Table~\ref{tab:factors} and the ''Sustained Performance values''. We will start the LSST consistent with System Availability of 75$\%$ which leads to fE \~1.0 using the Demonstrated Capability column f factors in Table~\ref{tab:factors}. However, the actual value will be better given that we expect the System Availability to improve significantly. 
+Using the combined SRD minimum specifications the lowest Normalized \'{E}tendue allowed is 0.7. This level is nearly in hand; see Table~\ref{tab:factors} and the ''Sustained Performance values''. We will start the LSST consistent with System Availability of 75$\%$ which leads to fE \approx~1.0 using the Demonstrated Capability column f factors in Table~\ref{tab:factors}. However, the actual value will be better given that we expect the System Availability to improve significantly. 
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{speed3.png}
+\caption{Image quality versus effective survey speed or Normalized \'{E}tendue. The large orange rectangle represents the region in this space within which we can confidently start the LSST while working to maintain and improve performance.}
+\label{speed3}
+\end{figure}
 
 \newpage
