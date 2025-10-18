@@ -14,12 +14,12 @@ Rubin has developed a high level set of metrics summarizing the system performan
 These {\it f--factors} are defined to be dimensionless and normalized by the corresponding SRD derived design values. They can be traded against each other as time gained or lost.  For example, deterioration in the mirror reflectivity can be easily translated to factor fS, and traded against time (e.g. time lost to recoating, the system efficiency), or against loss of sensor area (fA).
 The key point is that it is possible to define a simple measurable quantity (fE) that is an excellent numerical approximation for LSST science goals. Thus, we can think of the effective speed of executing the LSST (in units of the nominal speed) in terms of recognizable elements:  fE $=$ effective area $\times$ effective FOV $\times$ cadence $\times$ 1-downtime.
 
-In Figure~\ref{speed}, we show the state of our understanding of the image quality and survey speed before we went on sky with LSSTCam. The red star in the diagram is the LSR design performance goal corresponding to 0.35$\arcsec$ system contribution to delivered image quality (DIQ as measure in the focal plane). The white circle is a forecast based on expectations before we went on sky. We believe there is nothing limiting us reaching that circle, but the current performance is not there yet. 
+In Figure~\ref{speed}, we show the state of our understanding of the image quality and survey speed before we went on sky with LSSTCam. The white circle is a forecast based on expectations before we went on sky with some as built elements of the system accounted for. We believe there is nothing limiting us reaching that circle, but the current performance is not there yet. 
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.85\linewidth]{speed.png}
-\caption{Image quality versus effective survey speed, fE. The system contribution to the image quality is shown on the left vertical axis and the delivered image quality including the atmosphere (added in quadrature) is on the right. The LSST design is accomplished with nominal speed 1.0 and system contribution to DIQ of 0.4$\arcsec$ in this diagram. Current performance is assessed below. The white circle is representative of where we want to drive the performance, but we have not reached it yet.}
+\caption{Image quality versus effective survey speed, fE. The system contribution to the delivered image quality (sDIQ) is shown on the left vertical axis and the delivered image quality including the atmosphere (added in quadrature) is on the right. The LSST specifications are  accomplished with nominal speed fE = 1.0 and sDIQ = 0.4$\arcsec$ in this diagram. Current performance is assessed below. The white circle is representative of where we want to drive the performance, but we have not reached it yet.}
 \label{speed}
 \end{figure}
 
@@ -36,9 +36,9 @@ The range of performance between what has been achieved over periods of SV and t
 \caption{Current f factor status}\label{tab:factors}
 \begin{tabular}{cccc}
 \hline
-factor & Description& Sustained Performance & Needed to Start LSST \\
+factor & Description& SV Sustained Performance & Needed to Start LSST \\
 \hline \hline
-DIQ & System Contribution (PSF FWHM)  & 0.6$\arcsec$ & 0.45$\arcsec$ \\
+sDIQ & System Contribution to the PSF FWHM  & 0.6$\arcsec$ & 0.45$\arcsec$ \\
 fA & FoV area factor & 0.99 & 0.99 \\
 fS & Sensitivity factor & 0.94 & 1.30 \\
 fO & Observing Efficiency & 0.97 & 1.05 \\
