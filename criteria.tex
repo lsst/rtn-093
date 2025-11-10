@@ -28,7 +28,7 @@ Item & Criterion & Description& Status \\
 
 6 & sDIQ Uniformity& The ``System'' contribution to the measured Delivered Image Quality can vary over the field of view such that 10$\%$ or less of the FOV has a system contribution of up to 0.52$\arcsec$ (see LSST system specifications LSR-REQ-0008.  & \makecell[l]{\\Currently\\ not meeting \\for typical\\images\\}\\\hline
 
-7 & Ellipticity & Ellipticity for a single image will typically be as specified in the LSST system requirements as  LSR-REQ-0092. This is $\leq$ 0.04 with 5$\%$ or fewer outliers beyond 0.07.& \makecell[l]{\\In SV, \\typically not \\meeting\\}\\\hline
+7 & Ellipticity & Ellipticity for a single image will typically be as specified in the LSST system requirements as LSR-REQ-0092. This is $\leq$ 0.04 with 5$\%$ or fewer outliers beyond 0.07. See below; we will gate the survey start with respect to the residuals between the measured ellipticity and the calculated value from the WFS.& \makecell[l]{\\In SV, \\typically not \\meeting\\}\\\hline
 
 8 & Normalized \'{E}tendue (\it{eF}) & Survey Speed  is $>$ 0.7. & Currently 0.68 \\
 
@@ -78,6 +78,14 @@ Improving the system contribution to the DIQ requires continued effort on the co
 
 Equally important for the scientific value of the images is that the typical LSST images meet the requirements for uniformity across the field of view and ellipticity for bright isolated stars. These are given in Table~\ref{tab:criteria}. For uniformity to start the survey, we identify the value of the allowed contribution in the worst quartile of the overall seeing profile given in the SRD. This is 0.52$\arcsec$. 
 
+We intend to meet the ellipticity requirement, however it is likely we will start the LSST when the residuals for ellipticity from the system component are well understood, even if the formal requirement is not yet met. This is because a calculation of the ellipticity (from the WFS) can result in residuals from the measured ellipticity which would allow us to detect the astrophysical weak lensing signal. This is described in the \citep[Section 3.3.3.3]{LPM-17}, "This specification does not by itself address weak lensing systematics, 
+because there are schemes for removing the influence of an anisotropic PSF on the observed shapes of galaxies. 
+However, it is known that these schemes leave smaller residuals if initially given isotropic PSFs to begin with, 
+hence the specification that the telescope$+$camera not greatly degrade the natural limit." Here, "the natural limit" 
+refers to "the ellipticity induced by atmospheric turbulence in a 10-second exposure in 0.69 arcsec will be in the 
+range 0.01-0.02" (also Section 3.3.3.3 of the SRD). Finally, as noted in the SRD, Section 3.4.0.4, it is the correlation 
+of ellipticity fit residuals that matters, and not their size. 
+
 \subsection{Dome Environmental Control}
 The dome will be the last major subsystem to be completed. Indeed it will not be done until mid 2026. The critical aspects that are needed are: to install, provide control for, and optimize the actuators for the dome louvers and the installation of the HVAC ductwork used for daytime thermal conditioning of the dome interior. There are 40 louvers, and some large fraction need to be operable (open at fractions consistent with telemetry in real time for temperatures and wind). The first actuators are installed now and one louver has been opened at night. Still more will need to be brought on line after the handover to meeting the system image quality criterion (we currently expect 12 will be operable after handover). If the louvers limit us to worse than typical system DIQ performance, we won't be able to start the LSST until they are largely deployed and in routine operation. 
 
@@ -94,12 +102,14 @@ The TMA is capable of accelerating more than we currently operate it. Higher acc
 
 This leaves the System Availability, Current performance of 0.75 needs to be improved. Doing only science like observations we have reached 85$\%$ at times. We need to continue to improve on procedures and reliability of systems throughout the summit facility as we go forward. This means training for faster troubleshooting and fault recovery, making communications on the telescope system bus more reliable, improving reliability of telescope, dome, and camera functions. These have all seen marked progress as expected throughout system integration, test, and commissioning. We will assume current performance of 75$\%$ conservatively. 
 
-Using the combined SRD minimum specifications the lowest Normalized \'{E}tendue allowed is 0.7. This level is nearly in hand; see Table~\ref{tab:factors} and the ''Sustained Performance values''. We will start the LSST consistent with System Availability of 75$\%$ which leads to fE $=$ 1.01 using the Needed to Start LSST column f factors in Table~\ref{tab:factors}. However, the actual value will be better given that we expect the System Availability to improve significantly. 
+Using the combined SRD minimum specifications the lowest Normalized \'{E}tendue allowed is 0.7. This level is nearly in hand; see Table~\ref{tab:factors} and the ''Sustained Performance values''. We will start the LSST consistent with System Availability of 75$\%$ which leads to fE $=$ 1.01 using the Needed to Start LSST column f factors in Table~\ref{tab:factors}. However, the actual value will be better given that we expect the System Availability to improve significantly and DIQ will also push fE to the right as it improves. 
+
+There remains the question of how reliably (often) we keep the performance in the green SRD box. Clearly some images will fall outside the box for any number of reasons, even in steady state operations. For purposes of starting the LSST. we will adopt a criteria that we can begin if we are more often than not in the box on average. 
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.85\linewidth]{speed3.png}
-\caption{Image quality versus effective survey speed or Normalized \'{E}tendue. The large orange rectangle represents the region in this space within which we can confidently start the LSST while working to maintain and improve performance.}
+\caption{Image quality versus effective survey speed or Normalized \'{E}tendue. The large green rectangle represents the region in this space within which we can confidently start the LSST while working to maintain and improve performance. We expect to enter this box near the middle top where the shading is lighter.}
 \label{speed3}
 \end{figure}
 
